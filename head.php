@@ -28,6 +28,7 @@
             <a class="nav-link" href="logoutAction.php">Deconnexion</a>
           </li>
           <?php }?>
+          a
         
       </ul>
     </div>
