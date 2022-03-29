@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Ajouter un trajet</a>
+          <a class="nav-link active" aria-current="page" href="routes.php">Ajouter un trajet</a>
         </li>
         <?php if ($_SESSION['auth'] == false){?>
             <li class="nav-item">
