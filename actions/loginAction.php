@@ -3,8 +3,6 @@ session_start();
 require('database.php');
 
 
-
-
 //Validation du formulaire
 if(isset($_POST['validate'])){
 
@@ -14,18 +12,17 @@ if(isset($_POST['validate'])){
         //les données de l'user
         $user_pseudo = htmlspecialchars($_POST['mail']);
         $user_password = htmlspecialchars($_POST['motDePasse']);
-
         //Vérifier si l'utilisateur existe (si le pseudo est correct)
-        $checkIfUserExist = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
+        $checkIfUserExist = $bdd->prepare('SELECT * FROM Utilisateur WHERE mail = ?');
         $checkIfUserExist->execute(array($user_pseudo));
-
+        echo "Valeur res requete "+$checkIfUserExist->rowCount();
         if($checkIfUserExist->rowCount() > 0){
 
             //récupérer les données de l'utilisateur
             $usersInfos = $checkIfUserExist->fetch();
-
+            echo $usersInfos;
             //vérifier si le mot de passe est correct
-            if(password_verify($user_password, $usersInfos['mdp'])){
+            if(password_verify($user_password, $usersInfos['motDePasse'])){
 
                 //Authentifier l'utilisateur sur le site et récup ses données dans des variables globales sessions
                 $_SESSION['auth'] = true;
@@ -40,6 +37,7 @@ if(isset($_POST['validate'])){
 
             }else{
                 $errorMsg = "Votre mot de passe est incorrect...";
+                
             }
 
         }else{
