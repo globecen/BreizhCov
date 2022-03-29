@@ -18,9 +18,17 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="">Ajouter un trajet</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Connexion</a>
-        </li>
+        <?php if ($_SESSION['auth'] == false){?>
+            <li class="nav-item">
+            <a class="nav-link" href="login.php">Connexion</a>
+          </li>
+          <?php }
+        else{?>
+            <li class="nav-item">
+            <a class="nav-link" href="logoutAction.php">Deconnexion</a>
+          </li>
+          <?php }?>
+        
       </ul>
     </div>
   </div>

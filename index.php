@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <a href="logoutAction.php"> déconnexion </a>
     <form class="container" method="POST">
 
     <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
