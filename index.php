@@ -17,8 +17,6 @@
     </div>
     <input id="startDate" class="form-control" type="date" />
     <br>
-    <a href="signup.php"><p class="btn btn-dark">Rechercher</p></a>
-    <br>
-    <a href="signup.php"><p class="btn btn-dark">Je n'ai pas de compte, je m'inscris</p></a>
+    <a href="index.php"><p class="btn btn-dark">Rechercher</p></a>
   </body>
 </html>

@@ -15,9 +15,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+      </li>
+        <?php if ($_SESSION['auth'] == true){?>
+            <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="routes.php">Ajouter un trajet</a>
         </li>
+          <?php }
+        else{?>
+           <li class="nav-item">
+          <a class="nav-link disabled" aria-current="page" href="routes.php">Ajouter un trajet</a>
+        </li>
+          <?php }?>
+        
+
+       
         <?php if ($_SESSION['auth'] == false){?>
             <li class="nav-item">
             <a class="nav-link" href="login.php">Connexion</a>
@@ -28,7 +39,6 @@
             <a class="nav-link" href="logoutAction.php">Deconnexion</a>
           </li>
           <?php }?>
-          a
         
       </ul>
     </div>
