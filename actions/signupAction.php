@@ -9,7 +9,6 @@ if(isset($_POST['validate'])){
     if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['motDePasse']) && !empty($_POST['mail'])){
         
         //les données de l'user
-       
         $user_nom = htmlspecialchars($_POST['nom']);
         $user_prenom = htmlspecialchars($_POST['prenom']);
         $user_motDePasse = htmlspecialchars($_POST['motDePasse']);
