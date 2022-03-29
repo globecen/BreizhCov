@@ -9,7 +9,7 @@ require('database.php');
 if(isset($_POST['validate'])){
 
     //Vérifier si l'user a bien complété tout les champs
-    if(!empty($_POST['pseudo']) && !empty($_POST['password'])){
+    if(!empty($_POST['mail']) && !empty($_POST['motDePasse'])){
 
         //les données de l'user
         $user_pseudo = htmlspecialchars($_POST['mail']);
