@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <a href="actions/logoutAction.php"> déconnexion </a>
+    <a href="logoutAction.php"> déconnexion </a>
     <form class="container" method="POST">
 
     <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
@@ -17,12 +17,9 @@
         <label for="exampleInputPassword1" class="form-label">Destination</label>
         <input type="password" class="form-control" name="motDePasse">
     </div>
-    <div class="form-group">
-    <div class="datepicker date input-group">
-        <input type="text" placeholder="Choisir une date" class="form-control" id="reservationDate">
-        <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
-    </div>
-</div>
+    <input id="startDate" class="form-control" type="date" />
+    <br>
+    <a href="signup.php"><p class="btn btn-dark">Rechercher</p></a>
     <br>
     <a href="signup.php"><p class="btn btn-dark">Je n'ai pas de compte, je m'inscris</p></a>
   </body>
