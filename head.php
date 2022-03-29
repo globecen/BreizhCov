@@ -28,7 +28,7 @@
             <a class="nav-link" href="logoutAction.php">Deconnexion</a>
           </li>
           <?php }?>
-          a
+          <img src="img/logo.png" alt="logo">
         
       </ul>
     </div>
