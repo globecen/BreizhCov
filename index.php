@@ -8,5 +8,6 @@
   <body>
     <img src="images/firefox-icon.png" alt="Mon image de test">
     <h1>issou</h1>
+    <a href="actions/logoutAction.php"> déconnexion </a>
   </body>
 </html>

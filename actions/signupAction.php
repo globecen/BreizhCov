@@ -10,25 +10,25 @@ if(isset($_POST['validate'])){
         
         //les données de l'user
        
-        $user_pseudo = htmlspecialchars($_POST['nom']);
-        $user_lastname = htmlspecialchars($_POST['prenom']);
-        $user_password = htmlspecialchars($_POST['motDePasse']);
-        $user_firstname= htmlspecialchars($_POST['mail']);
+        $user_nom = htmlspecialchars($_POST['nom']);
+        $user_prenom = htmlspecialchars($_POST['prenom']);
+        $user_motDePasse = htmlspecialchars($_POST['motDePasse']);
+        $user_mail = htmlspecialchars($_POST['mail']);
            
         //vérifie si l'utilisateur existe déjà sur le site
         $checkIfUserAlreadyExists = $bdd->prepare('SELECT mail FROM Utilisateur WHERE mail = ?');
         $checkIfUserAlreadyExists->execute(array($user_pseudo));
      
         if($checkIfUserAlreadyExists->rowCount() == 0){
-
+            
             //insérer l'utilisateur dans la BDD
             $insertUserOnWebsite = $bdd->prepare('INSERT INTO Utilisateur(nom, prenom, motDePasse, mail) VALUES(?, ?, ?, ?)');
-            $insertUserOnWebsite->execute(array($user_pseudo, $user_lastname, $user_firstname, $user_password));
+            $insertUserOnWebsite->execute(array($user_nom, $user_prenom, $user_motDePasse, $user_mail));
 
             //récupérer les infos de l'utilisateur
             $getInfosOfThisUserReq = $bdd->prepare('SELECT * FROM Utilisateur WHERE nom = ? AND prenom = ? AND motDePasse = ? AND mail = ?');
-            $getInfosOfThisUserReq->execute(array($user_lastname, $user_firstname, $user_pseudo, $user_password)));
-
+            $getInfosOfThisUserReq->execute(array($user_nom, $user_prenom, $user_motDePasse, $user_mail));
+            
             $userInfos = $getInfosOfThisUserReq->fetch();
 
             //Authentifier l'utilisateur sur le site et récup ses données dans des variables globales sessions
@@ -44,7 +44,7 @@ if(isset($_POST['validate'])){
         }else{
             $errorMsg = "l'utilisateur existe déjà sur le site";
         }
-  */
+  
     }else{
         $errorMsg = "Veuillez compléter tous les champs...";
     }
