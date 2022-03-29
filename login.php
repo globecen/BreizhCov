@@ -4,8 +4,6 @@
 <html lang="fr">
 <?php include 'head.php'?>
 <body>
-
-
     <br><br>
     <form class="container" method="POST">
 
