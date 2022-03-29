@@ -7,5 +7,5 @@
     <link href="bootstrap/css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
     <script src="boostrap/js"></script>
-    <title>Forum</title>
+    <title>BreizhCov</title>
 </head>

@@ -1,7 +1,7 @@
 <?php require('actions/loginAction.php')?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <?php include 'head.php'?>
 <body>
 
@@ -12,13 +12,13 @@
     <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
 
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Pseudo</label>
-        <input type="text" class="form-control" name="pseudo">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="text" class="form-control" name="mail">
     </div>
 
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password">
+        <input type="password" class="form-control" name="motDePasse">
     </div>
 
     <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
