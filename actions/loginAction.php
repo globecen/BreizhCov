@@ -19,16 +19,15 @@ if(isset($_POST['validate'])){
         $checkIfUserExist = $bdd->prepare('SELECT * FROM Utilisateur WHERE mail = ?');
         $checkIfUserExist->execute(array($user_mail));
         
-        //echo "Valeur res requete "+$checkIfUserExist->rowCount();
         if($checkIfUserExist->rowCount() > 0){
         
             //récupérer les données de l'utilisateur
             $usersInfos = $checkIfUserExist->fetch();
-            //echo $usersInfos;
+
             //vérifier si le mot de passe est correct
-            echo $usersInfos;
-            if($usersInfos['motDePasse']){
-                echo "lol";
+            var_dump($usersInfos['motDePasse']);
+            if($user_motDePasse==$usersInfos['motDePasse']){
+
                 //Authentifier l'utilisateur sur le site et récup ses données dans des variables globales sessions
                 $_SESSION['auth'] = true;
                 $_SESSION['id'] = $usersInfos['id'];
