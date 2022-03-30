@@ -2,6 +2,12 @@
 <?php include 'head.php'?>
 <!DOCTYPE html>
 <html>
+<style>
+p {
+  background-image: url('Z.png');
+}
+</style>
+
   <body>
     <br>
     <form action="actions/searchAction.php" class="container" method="POST">
