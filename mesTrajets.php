@@ -1,6 +1,7 @@
 <?php session_start();?>
 <?php include 'head.php'?>
 <?php require('database.php');?>
+<?php include 'style.php'?>
 <?php
 $user_id=$_SESSION['id'];
 //var_dump($user_id);

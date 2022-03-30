@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include 'head.php'?>
+<?php include 'style.php'?>
 <body>
     <br><br>
     <form class="container" method="POST">

@@ -1,14 +1,8 @@
 <?php session_start();?>
 <?php include 'head.php'?>
+<?php include 'style.php'?>
 <!DOCTYPE html>
 <html>
-
-<style>
-body{
-  background-image: url('Z.png');
-}
-</style>
-
   <body>
     <br>
     <form action="actions/searchAction.php" class="container" method="POST">

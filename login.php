@@ -1,5 +1,6 @@
 <?php require('actions/loginAction.php')?>
 <?php include 'head.php'?>
+<?php include 'style.php'?>
 <body>
     <br>
     <form class="container" method="POST">

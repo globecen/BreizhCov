@@ -1,5 +1,6 @@
 <?php require('actions/createRoute.php') ?>
 <?php include 'head.php'?>
+<?php include 'style.php'?>
 <!DOCTYPE html>
 <html>
   <body>
