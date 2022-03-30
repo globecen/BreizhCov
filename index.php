@@ -1,4 +1,4 @@
-<?php require('actions/loginAction.php') ?>
+<?php require('actions/searchAction.php') ?>
 <?php include 'head.php'?>
 <!DOCTYPE html>
 <html>
