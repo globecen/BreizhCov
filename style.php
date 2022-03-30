@@ -3,7 +3,7 @@
     html{
         background-color: #dfe9ff;
         margin-bottom: 0px;
-        width: 50%;
+        height: 50%;
     }
 
      body{
@@ -13,5 +13,5 @@
         background-repeat: no-repeat;
         height: 100%;
     }
-    
+
 </style>
