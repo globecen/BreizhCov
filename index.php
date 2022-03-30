@@ -2,8 +2,9 @@
 <?php include 'head.php'?>
 <!DOCTYPE html>
 <html>
+
 <style>
-p {
+body{
   background-image: url('Z.png');
 }
 </style>
