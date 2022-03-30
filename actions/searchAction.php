@@ -67,7 +67,7 @@ echo'<table class="table bg-primary">';
   echo'</thead>';
   echo'<tbody>';
 while($row = $searchTrajet->fetch()) {
-    echo'<tr><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><button type="button" class="btn btn-primary"><i class="far fa-eye">Réserver</i></button></td></tr>';
+    echo'<tr><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><button type="button" class="btn btn-primary btn-light"><i class="far fa-eye">Réserver</i></button></td></tr>';
 }
   echo'</tbody>';
 echo'</table>';
