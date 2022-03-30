@@ -3,9 +3,8 @@ session_start();
 require('database.php');
 $search_villeDepart = htmlspecialchars($_POST['villeDepart']);
 $search_villeArrivee = htmlspecialchars($_POST['villeArrivee']);
-$search_laDate = htmlspecialchars($_POST['dateDepart']);
-$searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart='+$search_villeDepart+' AND villeArrivee='+$search_villeArrivee+' AND dateDepart='+$search_laDate+')');
-//$searchTrajet->execute(array($search_villeDepart,$search_villeArrivee,$search_laDate));
-//$searchTrajetRes = $searchTrajet->fetch();
+$search_dateDepart = htmlspecialchars($_POST['dateDepart']);
+$searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee= ? AND dateDepart= ?');
+$searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
 var_dump($searchTrajet);
 ?>
