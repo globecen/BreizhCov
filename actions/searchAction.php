@@ -9,5 +9,8 @@ $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_
 //$routes = $searchTrajet->fetchAll();
 while($row = $searchTrajet->fetch()) {
     echo $row['villeDepart'];
+    echo $row['villeArrive'];
+    echo $row['dateDepart'];
+    echo $row['places'];
 }
 ?>
