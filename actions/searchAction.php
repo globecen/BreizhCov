@@ -18,7 +18,8 @@ echo"<table class="table">";
 while($row = $searchTrajet->fetch()) {
     echo"<tr>"
         echo"<td>";
-        echo $row['villeDepart'];
+        echo"test";
+        //echo $row['villeDepart'];
         echo"</td>";
         /*<td>echo $row['villeArrivee'];</td>
         <td>echo $row['dateDepart'];</td>
