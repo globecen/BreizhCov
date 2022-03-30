@@ -17,8 +17,8 @@
         <input type="password" placeholder="Mot de passe"  class="form-control" name="motDePasse">
     </div>
 
-    <button type="submit" class="btn btn-dark" name="validate">Se connecter</button>
+    <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
     <br><br>
-    <a href="signup.php"><p class="btn btn-dark">Je n'ai pas de compte, je m'inscris</p></a>
+    <a href="signup.php"><p class="btn btn-dark btn-default">Je n'ai pas de compte, je m'inscris</p></a>
 </body>
 </html>
