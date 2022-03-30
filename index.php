@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col">
         </div>
-        <div class="col-5">
+        <div class="col-9">
           <form action="actions/searchAction.php" class="row row-cols-lg-auto g-3 align-items-center" method="POST">
 
           <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
