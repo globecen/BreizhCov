@@ -69,19 +69,29 @@ $search_villeArrivee = htmlspecialchars($_POST['villeArrivee']);
 $search_dateDepart = htmlspecialchars($_POST['dateDepart']);
 $searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee = ? AND dateDepart = ?');
 $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
-//$routes = $searchTrajet->fetchAll();
-echo'<table class="table bg-primary">';
-  echo'<thead>';
-    echo'<th scope="col">Départ</th>';
-    echo'<th scope="col">Arrivé</th>';
-    echo'<th scope="col">Date</th>';
-    echo'<th scope="col">Nombre de places</th>';
-    echo'<th scope="col"></th>';
-  echo'</thead>';
-  echo'<tbody>';
-while($row = $searchTrajet->fetch()) {
-    echo'<tr><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><button type="button" class="btn btn-primary btn-light"><i class="far fa-eye">Réserver</i></button></td></tr>';
-}
-  echo'</tbody>';
-echo'</table>';
+
+echo'<div class="container">';
+  echo'<div class="row">';
+    echo'<div class="col">';
+    echo'</div>';
+    echo'<div class="col-9">';
+    echo'<table class="table bg-primary">';
+      echo'<thead>';
+        echo'<th scope="col">Départ</th>';
+        echo'<th scope="col">Arrivé</th>';
+        echo'<th scope="col">Date</th>';
+        echo'<th scope="col">Nombre de places</th>';
+        echo'<th scope="col"></th>';
+      echo'</thead>';
+      echo'<tbody>';
+    while($row = $searchTrajet->fetch()) {
+        echo'<tr><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><button type="button" class="btn btn-primary btn-light"><i class="far fa-eye">Réserver</i></button></td></tr>';
+    }
+      echo'</tbody>';
+    echo'</table>';
+    echo'</div>';
+    echo'<div class="col">';
+    echo'</div>';
+  echo'</div>';
+echo'</div>';
 ?>
