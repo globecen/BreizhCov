@@ -7,7 +7,7 @@ $search_dateDepart = htmlspecialchars($_POST['dateDepart']);
 $searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee = ? AND dateDepart = ?');
 $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
 //$routes = $searchTrajet->fetchAll();
-while($row = $routes->fetch()) {
+while($row = $searchTrajet->fetch()) {
     echo $row['villeDepart'];
 }
 ?>
