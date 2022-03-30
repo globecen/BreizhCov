@@ -62,6 +62,7 @@ $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_
 echo'<link rel="stylesheet" href="../style.php">';
 echo'<html>';
 echo'<body>';
+echo'<br>';
 echo'<div class="container">';
   echo'<div class="row">';
     echo'<div class="col">';
