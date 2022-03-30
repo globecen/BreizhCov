@@ -3,6 +3,15 @@
 <?php include 'style.php'?>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <!-- toat -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js  "></script>
+    <script>
+      document.getElementById('test').addEventListener('click', function(){toastr.info('Trajet ajouté');})
+      </script>
   <body>
     <br>
     <div class="container">
@@ -26,7 +35,7 @@
           </div>
           <input id="startDate" class="form-control" name="dateDepart" type="date" />
           <br>
-          <button type="submit" class="btn btn-outline-dark" name="validate">Ajouter</button>
+          <button id="test" type="submit" class="btn btn-outline-dark" name="validate">Ajouter</button>
         </div>
         <div class="col">
         </div>
