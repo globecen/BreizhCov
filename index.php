@@ -15,7 +15,7 @@
     <div class="mb-3">
         <input type="text " placeholder="Ville de départ" class="form-control" name="villeArrivee">
     </div>
-    <input id="startDate" class="form-control" type="date" name="laDate"/>
+    <input id="startDate" class="form-control" type="date" name="dateDepart"/>
     <br>
     <a href="actions/searchAction.php"><p class="btn btn-dark">Rechercher</p></a>
   </body>
