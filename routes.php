@@ -19,6 +19,6 @@
     </div>
     <input id="startDate" class="form-control" name="dateDepart" type="date" />
     <br>
-    <button type="submit" class="btn btn-primary" name="validate">Ajouter</button>
+    <button type="submit" class="btn btn-outline-dark" name="validate">Ajouter</button>
   </body>
 </html>

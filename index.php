@@ -17,6 +17,6 @@
     </div>
     <input id="startDate" class="form-control" type="date" name="dateDepart"/>
     <br>
-    <a href="actions/searchAction.php"><p class="btn btn-dark">Rechercher</p></a>
+    <a href="actions/searchAction.php"><p class="btn btn-outline-dark">Rechercher</p></a>
   </body>
 </html>
