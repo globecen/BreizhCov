@@ -1,10 +1,9 @@
-<?php require('actions/searchAction.php') ?>
 <?php include 'head.php'?>
 <!DOCTYPE html>
 <html>
   <body>
     <br>
-    <form class="container" method="POST">
+    <form action="actions/searchAction.php" class="container" method="POST">
 
     <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
 
@@ -17,6 +16,6 @@
     </div>
     <input id="startDate" class="form-control" type="date" name="dateDepart"/>
     <br>
-    <a href="actions/searchAction.php"><p class="btn btn-outline-dark">Rechercher</p></a>
+    <p><input type="submit" value="Rechercher"class="btn btn-outline-dark"></p>
   </body>
 </html>
