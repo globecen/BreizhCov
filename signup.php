@@ -10,25 +10,21 @@
         <?php if(isset($errorMsg)){echo '<p>'.$errorMsg.'</p>';}?>
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="nom">
+            <input type="text" class="form-control" placeholder="Nom" name="nom">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Prenom</label>
-            <input type="text" class="form-control" name="prenom">
+            <input type="text" class="form-control" placeholder="Prénom" name="prenom">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" name="motDePasse">
+            <input type="password" class="form-control" placeholder="Mot de passe" name="motDePasse">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Mail</label>
-            <input type="text" class="form-control" name="mail">
+            <input type="text" class="form-control" placeholder="Mail" name="mail">
         </div>
 
-        <button type="submit" class="btn btn-outline-dark" name="validate">S'inscrire</button>
+        <button type="submit" class="btn btn-lg btn-primary" name="validate">S'inscrire</button>
         <br><br>
-        <a href="login.php"><p class="btn btn-outline-dark">J'ai déjà un compte, je me connecte</p></a>
+        <a href="login.php"><p class="btn btn-lg btn-primary" >J'ai déjà un compte, je me connecte</p></a>
     </form>
 </body>
 </html>
