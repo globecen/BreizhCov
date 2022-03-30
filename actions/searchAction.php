@@ -59,9 +59,8 @@ $search_dateDepart = htmlspecialchars($_POST['dateDepart']);
 $searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee = ? AND dateDepart = ?');
 $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
 
-echo'<body style=
-"background-image: linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5);
-">';
+echo'<link rel="stylesheet" href="style.php">';
+echo'<body>';
 echo'<div class="container">';
   echo'<div class="row">';
     echo'<div class="col">';
