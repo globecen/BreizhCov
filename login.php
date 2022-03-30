@@ -1,7 +1,4 @@
 <?php require('actions/loginAction.php')?>
-
-<!DOCTYPE html>
-<html lang="fr">
 <?php include 'head.php'?>
 <body>
     <br>
