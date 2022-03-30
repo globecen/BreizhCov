@@ -33,7 +33,7 @@
           <?php }?>
         <?php if ($_SESSION['auth'] == false){?>
             <li class="nav-item">
-            <a class="nav-link" href="login.php">Connexion</a>
+            <a class="nav-link btn btn-default" href="login.php">Connexion</a>
           </li>
           <?php }
         else{?>
