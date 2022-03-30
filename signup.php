@@ -25,7 +25,7 @@
             <input type="text" class="form-control" name="mail">
         </div>
 
-        <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
+        <button type="submit" class="btn btn-dark" name="validate">S'inscrire</button>
         <br><br>
         <a href="login.php"><p class="btn btn-dark">J'ai déjà un compte, je me connecte</p></a>
     </form>
