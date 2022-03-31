@@ -1,21 +1,11 @@
+<?php session_start();?>
+<?php include 'style.php'?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-    <style>
-    html{
-        background-color: #dfe9ff;
-    }
-
-    body {
-        background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('img/acceuil.png');
-    }
-
-    
-</style>
+    <?php include 'style.php' ?>
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
     <script src="../boostrap/js/bootstrap.js"></script>
@@ -61,29 +51,45 @@
 </nav>
 </head>
 <?php
-session_start();
-
+function afficher(){
+               echo "The select function is called.";
+            }
 require('database.php');
-$update_Nb_Place = $bdd->prepare('UPDATE "Trajet" SET "places"= ? WHERE "Trajet.id"= ?');
-$searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
-$search_villeDepart = htmlspecialchars($_POST['villeDepart']);
-$search_villeArrivee = htmlspecialchars($_POST['villeArrivee']);
-$search_dateDepart = htmlspecialchars($_POST['dateDepart']);
+$search_villeDepart = $_SESSION['villeDepart'];
+$search_villeArrivee = $_SESSION['villeArrivee'];
+$search_dateDepart = $_SESSION['dateDepart'];
+$updateValNbPlace = $bdd->prepare('UPDATE `Trajet` SET `places` = '18' WHERE `Trajet`.`id` = 14;')
 $searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee = ? AND dateDepart = ?');
 $searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
-//$routes = $searchTrajet->fetchAll();
-echo'<table class="table bg-primary">';
-  echo'<thead>';
-    echo'<th scope="col">Départ</th>';
-    echo'<th scope="col">Arrivé</th>';
-    echo'<th scope="col">Date</th>';
-    echo'<th scope="col">Nombre de places</th>';
-    echo'<th scope="col"></th>';
-  echo'</thead>';
-  echo'<tbody>';
-while($row = $searchTrajet->fetch()) {
-    echo'<tr><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><button type="button" class="btn btn-primary btn-light"><i class="far fa-eye">Réserver</i></button></td></tr>';
-}
-  echo'</tbody>';
-echo'</table>';
+
+echo'<link rel="stylesheet" href="../style.php">';
+echo'<html>';
+echo'<body>';
+echo'<br>';
+echo'<div class="container">';
+  echo'<div class="row">';
+    echo'<div class="col">';
+    echo'</div>';
+    echo'<div class="col-9">';
+    echo'<table class="table table-dark">';
+      echo'<thead>';
+        echo'<th scope="col">Départ</th>';
+        echo'<th scope="col">Arrivé</th>';
+        echo'<th scope="col">Date</th>';
+        echo'<th scope="col">Nombre de places</th>';
+        echo'<th scope="col"></th>';
+      echo'</thead>';
+      echo'<tbody>';
+    while($row = $searchTrajet->fetch()) {
+        echo'<tr class="table-light"><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><form action="reserveAction.php" method="post"><input type="SUBMIT" class="btn btn-primary btn-dark" value="Réserver"><i class="far fa-eye"></i></input></form></td></tr>';
+    }
+      echo'</tbody>';
+    echo'</table>';
+    echo'</div>';
+    echo'<div class="col">';
+    echo'</div>';
+  echo'</div>';
+echo'</div>';
+echo'</body>';
+echo'</html>';
 ?>
