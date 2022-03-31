@@ -1,6 +1,16 @@
 <?php session_start();?>
 <?php include 'style.php'?>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<link rel="icon" type="image/png" href="../img/logo.png" />
+<!-- toat -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/require.js" data-main="/js/common.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js  "></script>
+  <script>
+    document.getElementById('test').addEventListener('click', function(){toastr.info('Reservation effectuée');})
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +41,7 @@
           <?php }?>
           <?php if ($_SESSION['auth'] == true){?>
             <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../mesTrajets.php">Mes trajets</a>
+          <a class="nav-link active" aria-current="page" href="mesTrajets.php">Mes trajets</a>
         </li>
           <?php }?>
         <?php if ($_SESSION['auth'] == false){?>
@@ -84,7 +94,7 @@ echo'<div class="container">';
       echo'</thead>';
       echo'<tbody>';
     while($row = $searchTrajet->fetch()) {
-        echo'<tr class="table-light"><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><form action="reserveAction.php" method="post"><input type="SUBMIT" class="btn btn-primary btn-dark" value="Réserver"><i class="far fa-eye"></i></input></form></td></tr>';
+        echo'<tr class="table-light"><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><form action="reserveAction.php" method="post"><input type="SUBMIT" id ="test" class="btn btn-primary btn-dark" value="Réserver"><i class="far fa-eye"></i></input></form></td></tr>';
     }
       echo'</tbody>';
     echo'</table>';

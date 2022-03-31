@@ -1,5 +1,7 @@
 <?php
 session_start();
+if ($_SESSION['auth'] == false){ header('Location: ../index.php');
+    exit();}
 require('database.php');
 
 //Validation du formulaire

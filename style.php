@@ -14,5 +14,8 @@
         background-size: cover;
         height: 100%;
     }
+    .toast-custom {
+    background-color: black;
+}
 
 </style>

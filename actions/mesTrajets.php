@@ -1,4 +1,7 @@
 <?php session_start();?>
+<?php if ($_SESSION['auth'] == false){ header('Location: ../index.php');
+  exit();}
+  ?>
 <?php include 'style.php'?>
 <head>
 <link rel="icon" type="image/png" href="../img/logo.png" />
@@ -64,12 +67,15 @@ function afficher(){
                echo "The select function is called.";
             }
 require('database.php');
+$mesTrajets = $_SESSION['id'];
+//var_dump($_SESSION['id']);
 $search_villeDepart = $_SESSION['villeDepart'];
 $search_villeArrivee = $_SESSION['villeArrivee'];
 $search_dateDepart = $_SESSION['dateDepart'];
 //$updateValNbPlace = $bdd->prepare('UPDATE `Trajet` SET `places` = '18' WHERE `Trajet`.`id` = 14;')
-$searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE villeDepart = ? AND villeArrivee = ? AND dateDepart = ?');
-$searchTrajet->execute(array($search_villeDepart, $search_villeArrivee, $search_dateDepart));
+$searchTrajet = $bdd->prepare('SELECT * FROM Trajet WHERE idConducteur ='.$mesTrajets);
+//var_dump($searchTrajet);
+$searchTrajet->execute();
 
 echo'<link rel="stylesheet" href="../style.php">';
 echo'<html>';
@@ -90,7 +96,7 @@ echo'<div class="container">';
       echo'</thead>';
       echo'<tbody>';
     while($row = $searchTrajet->fetch()) {
-        echo'<tr class="table-light"><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td><input type="SUBMIT" id="test" class="btn btn-primary btn-dark" value="Réserver"><i class="far fa-eye"></i></input></form></td></tr>';
+        echo'<tr class="table-light"><td>'.$row["villeDepart"].'</td><td>'.$row["villeArrivee"].'</td><td>'.$row["dateDepart"].'</td><td>'.$row["places"].'</td><td></td></tr>';
     }
       echo'</tbody>';
     echo'</table>';
