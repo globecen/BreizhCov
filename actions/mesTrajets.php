@@ -89,7 +89,7 @@ echo'<div class="container">';
     echo'<table class="table table-dark">';
       echo'<thead>';
         echo'<th scope="col">Départ</th>';
-        echo'<th scope="col">Arrivé</th>';
+        echo'<th scope="col">Arrivée</th>';
         echo'<th scope="col">Date</th>';
         echo'<th scope="col">Nombre de places</th>';
         echo'<th scope="col"></th>';

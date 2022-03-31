@@ -20,7 +20,7 @@
           </div>
 
           <div class="form-row align-items-center">
-              <input type="text " placeholder="Ville de départ" class="form-control" name="villeArrivee">
+              <input type="text " placeholder="Ville d'arrivée" class="form-control" name="villeArrivee">
           </div>
           <div class="form-row align-items-center">
             <input id="startDate" class="form-control" type="date" name="dateDepart"/>
